@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "jsonfmt"
+name = "sync"
 version = "0.1.0"
