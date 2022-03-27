@@ -52,11 +52,8 @@ func main() {
 	files := flag.Args()
 	if len(files) == 1 && isDir(filepath.Join(ctx.SrcRoot, files[0])) {
 		copyPkgDir(filepath.Join(ctx.SrcRoot, files[0]), filepath.Join(ctx.DstRoot, files[0]), recursive)
-	} else if len(files) > 0 {
-		copyPkgFiles(ctx.SrcRoot, ctx.DstRoot, files)
 	} else {
-		flag.Usage()
-		os.Exit(1)
+		copyPkgFiles(ctx.SrcRoot, ctx.DstRoot, files)
 	}
 
 	if syncInternal {
@@ -509,7 +506,7 @@ func initCtx() {
 		fmt.Fprintf(os.Stderr, "%s: [options] files...\n\n", filepath.Base(os.Args[0]))
 		flag.PrintDefaults()
 	}
-	
+
 	// TODO: load build config from go/build
 
 	goVer, _ := strconv.Atoi(runtime.Version()[4:])
@@ -534,6 +531,11 @@ func initCtx() {
 	flag.BoolVar(&syncInternal, "internal", false, "copy internal")
 	flag.BoolVar(&printCtx, "printctx", false, "print ctx")
 	flag.Parse()
+
+	if flag.NArg() == 0 {
+		flag.Usage()
+		os.Exit(1)
+	}
 
 	ctx.GO1VER = goVer
 	ctx.GOTAGS = map[string]bool{
