@@ -1,0 +1,8 @@
+github.com/rokumoe/arpc v0.0.1 h1:NLCn+kRfuAQjoEaYwCfJz6xiF8pfTJhrWr/vnDNpKjQ=
+github.com/rokumoe/arpc v0.0.1/go.mod h1:QtP9kpSj1AvbeAvHqioJ4TKSAmG/r+Zt5PteZ3Ihm+c=
+github.com/vizee/echo v0.1.1 h1:rIyrWvq2nQqq9Woi1Ei4diPmXowXMyIb9HHhxyNmFSU=
+github.com/vizee/echo v0.1.1/go.mod h1:i/s8o5+a+lfmAbm8YlL/sNKAB80lhmuk4a298M7XpyE=
+github.com/vizee/litebuf v0.1.0 h1:0cL3iWFKaD0CKohhzR4uC1Io1FxrRqew8sQwg+TnMe0=
+github.com/vizee/litebuf v0.1.0/go.mod h1:CsjU1sJyJ0PxLJGL7Pp4172BDFHxKfSd9MeJMrOg/RQ=
+github.com/vizee/litu v0.3.2 h1:58fnhx0RNgEHgoU73zvZWhvcdHycLVxvMl09qTr+3i8=
+github.com/vizee/litu v0.3.2/go.mod h1:FlZB9HGT16r0rpCcFBWt5GqKxLsP306yUaB49uuwkBA=
