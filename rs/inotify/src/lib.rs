@@ -1,6 +1,4 @@
-#![feature(cstr_from_bytes_until_nul)]
 #![feature(c_size_t)]
-#![feature(core_ffi_c)]
 
 use std::ffi::{c_int, CStr, CString};
 use std::io::{Error, Result};
@@ -13,7 +11,7 @@ use tokio::io::unix::AsyncFd;
 use tokio::io::Interest;
 
 pub mod sys {
-    use std::ffi::{c_int, c_size_t, c_ssize_t};
+    use core::ffi::{c_int, c_size_t, c_ssize_t};
 
     pub const NAME_MAX: usize = 255;
 
