@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\entry">
+      <UniqueIdentifier>{198e38fb-9ef8-4a08-ab3d-ec6e509521e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\decl">
+      <UniqueIdentifier>{e1525087-f31c-45e2-abda-e0356eafece7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ZaxRT.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ZaxPage.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ZaxGUI.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ZaxInspector.c">
+      <Filter>源文件\entry</Filter>
+    </ClCompile>
+    <ClCompile Include="ZaxDriver.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ZaxRT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ZaxPage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ZaxGUI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ZaxDialog.h">
+      <Filter>头文件\decl</Filter>
+    </ClInclude>
+    <ClInclude Include="ZaxDialogId.h">
+      <Filter>头文件\decl</Filter>
+    </ClInclude>
+    <ClInclude Include="ZaxText.h">
+      <Filter>头文件\decl</Filter>
+    </ClInclude>
+    <ClInclude Include="ZaxDriver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\zik\ZaxIoCode.h">
+      <Filter>头文件\decl</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

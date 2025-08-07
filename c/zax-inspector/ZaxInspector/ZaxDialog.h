@@ -1,0 +1,205 @@
+#ifndef ZAX_DIALOG_H
+#define ZAX_DIALOG_H
+
+#include "ZaxGUI.h"
+#include "ZaxText.h"
+#include "ZaxDialogId.h"
+
+#ifdef ZAX_DIALOG_PAGE
+
+#define COL_SSDT		(4)
+#define	COL_SSDTS		(4)
+#define COL_IDT			(4)
+#define COL_KERNEL		(4)
+
+//columns of ssdt
+const LVCOLPROP ColumnSSDT[COL_SSDT] = {
+	{
+		UI_SSDT_INDEX,
+		80
+	}, {
+		UI_SSDT_FUNC,
+		60
+	}, {
+		UI_SSDT_ORIG,
+		180
+	}, {
+		UI_SSDT_HOOK,
+		180
+	}
+};
+
+//columns of ssdt shadow
+const LVCOLPROP ColumnSSDTS[COL_SSDTS] = {
+	{
+		UI_SSDTS_INDEX,
+		80
+	}, {
+		UI_SSDTS_FUNC,
+		60
+	}, {
+		UI_SSDTS_ORIG,
+		180
+	}, {
+		UI_SSDTS_HOOK,
+		180
+	}
+};
+
+//columns of idt
+const LVCOLPROP ColumnIDT[COL_IDT] = {
+	{
+		UI_IDT_INDEX,
+		80
+	}, {
+		UI_IDT_TYPE,
+		150
+	}, {
+		UI_IDT_OFFS,
+		150
+	}, {
+		UI_IDT_DPL,
+		60
+	}
+};
+
+//columns of kernel
+const LVCOLPROP ColumnKernel[COL_KERNEL] = {
+	{
+		UI_KERNEL_ADDR,
+		100
+	}, {
+		UI_KERNEL_LEN,
+		80
+	}, {
+		UI_KERNEL_CUR,
+		180
+	}, {
+		UI_KERNEL_ORIG,
+		180
+	}
+};
+
+#elif defined ZAX_DIALOG_UI
+
+#define TAB_COUNT		(4)
+
+//tab text
+const LPTSTR TabCtrlText[TAB_COUNT] = {
+	UI_TC_SSDT,
+	UI_TC_SSDTS,
+	UI_TC_IDT,
+	UI_TC_KERNEL
+};
+
+#pragma region dialog layout & style
+
+const WNDPROP MainProp = {
+		UI_CLASSNAME,
+		UI_WINDOWTEXT,
+		WS_EX_WINDOWEDGE,
+		WS_OVERLAPPEDWINDOW,
+		CW_USEDEFAULT,
+		CW_USEDEFAULT,
+		630,
+		450,
+		NULL
+};
+
+const WNDPROP TabCtrlProp = {
+		WC_TABCONTROL,
+		NULL,
+		0,
+		TCS_TABS | TCS_FIXEDWIDTH | WS_CHILD | WS_VISIBLE | WS_TABSTOP,
+		0,
+		0,
+		0,
+		0,
+		(HMENU)IDC_TABCTRL
+};
+
+const WNDPROP ListViewProp = {
+	WC_LISTVIEW,
+	NULL,
+	0,
+	LVS_SHOWSELALWAYS | LVS_SINGLESEL | LVS_REPORT | WS_CHILD | WS_VISIBLE | WS_TABSTOP,
+	0,
+	0,
+	0,
+	0,
+	(HMENU)IDC_LISTVIEW
+};
+
+#pragma endregion
+
+#pragma region Menu properties
+
+const MENUPROP SysMenuProp[SYSMENU_ABOUT_COUNT] = {
+	{
+		MF_SEPARATOR, 0, NULL
+	}, {
+		MF_STRING, IDM_SYSABOUT, UI_MENU_ABOUT
+	}
+};
+
+const MENUPROP SSDTMenuProp[MENU_SSDT_COUNT] = {
+	{
+		MF_STRING, IDM_SSDT_REFRESH, MENU_SSDT_REFRESH
+	}, {
+		MF_SEPARATOR, 0, NULL
+	}, {
+		MF_STRING, IDM_SSDT_EXPORT, MENU_SSDT_EXPORT
+	}, {
+		MF_SEPARATOR, 0, NULL
+	}, {
+		MF_STRING, IDM_SSDT_RESTOREALL, MENU_SSDT_RESTOREALL
+	}
+};
+
+const MENUPROP SSDTSMenuProp[MENU_SSDTS_COUNT] = {
+	{
+		MF_STRING, IDM_SSDTS_REFRESH, MENU_SSDTS_REFRESH
+	}, {
+		MF_SEPARATOR, 0, NULL
+	}, {
+		MF_STRING, IDM_SSDTS_EXPORT, MENU_SSDTS_EXPORT
+	}, {
+		MF_SEPARATOR, 0, NULL
+	}, {
+		MF_STRING, IDM_SSDTS_RESTOREALL, MENU_SSDTS_RESTOREALL
+	}
+};
+
+const MENUPROP IDTMenuProp[MENU_IDT_COUNT] = {
+	{
+		MF_STRING, IDM_IDT_REFRESH, MENU_IDT_REFRESH
+	}, {
+		MF_SEPARATOR, 0, NULL
+	}, {
+		MF_STRING, IDM_IDT_EXPORT, MENU_IDT_EXPORT
+	}, /*{
+		MF_SEPARATOR, 0, NULL
+	}, {
+		MF_STRING, IDM_IDT_RESTOREALL, MENU_IDT_RESTOREALL
+	} */
+};
+
+const MENUPROP KernelMenuProp[MENU_KERNEL_COUNT] = {
+	{
+		MF_STRING, IDM_KERNEL_REFRESH, MENU_KERNEL_REFRESH
+	}, {
+		MF_SEPARATOR, 0, NULL
+	}, {
+		MF_STRING, IDM_KERNEL_EXPORT, MENU_KERNEL_EXPORT
+	}, {
+		MF_SEPARATOR, 0, NULL
+	}, {
+		MF_STRING, IDM_KERNEL_RESTOREALL, MENU_KERNEL_RESTOREALL
+	}
+};
+
+#pragma endregion
+
+#endif
+
+#endif

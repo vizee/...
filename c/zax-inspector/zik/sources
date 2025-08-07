@@ -1,0 +1,4 @@
+TARGETNAME=zik
+TARGETPATH=bin
+TARGETTYPE=DRIVER
+SOURCES=zik.c misc.c ssdt.c idt.c kernel.c

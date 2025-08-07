@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zik", "zik.vcxproj", "{1C1D4B27-CCB8-48AA-99D5-3423B0162491}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		chk|Win32 = chk|Win32
+		fre|Win32 = fre|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C1D4B27-CCB8-48AA-99D5-3423B0162491}.chk|Win32.ActiveCfg = chk|Win32
+		{1C1D4B27-CCB8-48AA-99D5-3423B0162491}.chk|Win32.Build.0 = chk|Win32
+		{1C1D4B27-CCB8-48AA-99D5-3423B0162491}.chk|Win32.Deploy.0 = chk|Win32
+		{1C1D4B27-CCB8-48AA-99D5-3423B0162491}.fre|Win32.ActiveCfg = chk|Win32
+		{1C1D4B27-CCB8-48AA-99D5-3423B0162491}.fre|Win32.Build.0 = chk|Win32
+		{1C1D4B27-CCB8-48AA-99D5-3423B0162491}.fre|Win32.Deploy.0 = chk|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
